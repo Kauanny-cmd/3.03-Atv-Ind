@@ -1,6 +1,7 @@
 import { quest1 } from "./q1";
 import { quest2 } from "./q2";
 import { quest3 } from "./q3";
+import { quest4 } from "./q4";
 import { quest5 } from "./q5";
 import { quest6 } from "./q6";
 
@@ -9,7 +10,10 @@ let b = ['kauanny', 'Wes', 'kaue']
 //let b = ['a', 'b']
 
 const array1 = ["abc", "def", "ghi"];
-const array2 = ["abc", "def", "ghij"];
+const array2 = ["abc", "def", "ghi"];
+
+const frutas = ['maçã', 'banana'];
+const cores = ['verde', 'azul', 'laranja'];
 
 let cidade = {
     alcunha: "A terra que ensinou a Paraíba a ler.",
@@ -30,5 +34,6 @@ let restaurantes = [
 console.log(`Questão 1: ` + quest1({a, b})); // questão 1
 console.log(`Questão 2: ` + quest2({a, b})); // questao 2
 console.log(`Questão 3: ` + quest3(array1, array2)); //questao 3
+console.log(`Questão 4: ` + quest4(frutas, cores)); // questao 4
 console.log(`Questão 5: ` + quest5(cidade)); // questao 5
 console.log(`Questão 6: ` + JSON.stringify(quest6(restaurantes))); // questao 6

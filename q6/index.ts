@@ -13,10 +13,9 @@ interface Restaurante {
     for (const restaurante of restaurantes) {
       if (!restaurantesPorCidade[restaurante.cidade]) {
         restaurantesPorCidade[restaurante.cidade] = [];
+      }else{
+        restaurantesPorCidade[restaurante.cidade].push(restaurante.nome);
       }
-  
-      restaurantesPorCidade[restaurante.cidade].push(restaurante.nome);
     }
-
     return restaurantesPorCidade;
   }  

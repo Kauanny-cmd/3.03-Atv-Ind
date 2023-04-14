@@ -2,8 +2,8 @@ export const quest3 = (arr1: string[], arr2: string[]): boolean =>{
 
     if (arr1.length !== arr2.length) {
       return false;
+    } else{
+      return arr1.every((element, index) => element === arr2[index]);
     }
-  
-    return arr1.every((element, index) => element === arr2[index]);
   }
   
