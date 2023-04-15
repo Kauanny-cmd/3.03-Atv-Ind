@@ -1,26 +1,24 @@
-export const quest4 = (a: string[], b: string[]) => {
-    a.map((elemA, i) => {
-      const elemB = b[i];
-      if (elemA.length !== elemB.length) {
-        return undefined;
-      } else {
-        const mesmoTamanho = elemA.length;
-        let saoIguais = true;
-        let elementoIgual: string | undefined = undefined;
-  
-        for (let j = 0; j < mesmoTamanho; j++) {
-          if (elemA[j] !== elemB[j]) {
-            saoIguais = false;
-            break;
-          } else {
-            elementoIgual = elemA[j];
-          }
+export const quest4 = (frutas: string[][], cores: string[][]): Array<string | undefined> | undefined => {
+
+
+    for (let i = 0; i < matriz1.length; i++) {
+        if (matriz1[i].length != matriz2[i].length) {
+            return undefined
         }
-        if (saoIguais) {
-          return elementoIgual;
-        } else {
-          return undefined;
+    }
+
+    let newArray: Array<string | undefined> = []
+
+    for (let linha = 0; linha < matriz1.length; linha++) {
+        for (let coluna = 0; coluna < matriz1.length; coluna++) {
+            if (matriz1[linha][coluna] === matriz2[linha][coluna]) {
+                newArray.push(matriz1[linha][coluna])
+            } else {
+                newArray.push(undefined)
+            }
+
         }
-      }
-    });
-  }
+    }
+
+    return newArray;
+}
